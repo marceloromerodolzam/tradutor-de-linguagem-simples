@@ -31,7 +31,7 @@ traduzir.addEventListener('click', function(){
                 break;
 
                 default:
-                    traducao = 'Escreva algo';
+                    traducao = 'Palavra invalida';
             }
         break;
 
@@ -51,13 +51,21 @@ traduzir.addEventListener('click', function(){
                 break;
 
                 default:
-                    traducao = 'Escreva algo';
+                    traducao = 'Palavra invalida';
             }
         break;
 
         default:
-            traducao = 'Escreva algo';
+            traducao = 'Palavra invalida';
     }
 
-    aviso.value = traducao; // Defina o valor do campo de entrada para exibir a tradução
+    if(inpTxt.value == 0){
+
+        aviso.value = 'Escreva algo';
+
+    }else{
+
+        aviso.value = traducao;
+
+    }
 });
